@@ -1,0 +1,52 @@
+﻿<Page x:Class="Admin_Launcher.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Admin_Launcher"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Settings">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="460" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        
+            <GroupBox Header="Admin Credentials" >
+        <Grid Background="AliceBlue" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="AUTO" />
+            </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="15" />
+                </Grid.RowDefinitions>
+            
+            
+            <StackPanel>
+                <Label Content="User Name (domain\username):" />
+                <Label Content="Password:" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+
+                <TextBox Name="tbxUsername" Width="200" Height="20" Margin="0,3,0,3" />
+                <PasswordBox Name="tbxPass" Width="200" Height="20" Margin="0,3,0,3"/>
+
+                <Button Name="psswrd" Content="Set Credentials" Height="25" Width="100" Margin="0,15,0,0" HorizontalAlignment="Left" Click="Psswrd_Click"/>
+            </StackPanel>
+
+            <TextBlock Name="lblSaved" Text="Account Information Saved!" Foreground="DarkGoldenrod" FontSize="10" Grid.Row="1" Visibility="Collapsed"/>
+        </Grid>
+        </GroupBox>
+
+    </Grid>
+</Page>

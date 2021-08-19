@@ -1,0 +1,33 @@
+﻿<Window x:Class="Admin_Launcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Admin_Launcher"
+        mc:Ignorable="d"
+        Title="Admin Launcher" Height="450" Width="800" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Background="Gray">
+            <ListView Name="lvMenu" Background="Transparent" SelectionMode="Single" SelectionChanged="LvMenu_SelectionChanged">
+                <ListViewItem Name="lstLaunch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="&#xE83D;" FontFamily="Segoe MDL2 Assets" FontSize="18" Height="28" />
+                        <Label Content="Launcher" Background="Transparent" FontWeight="Bold" FontSize="17"/>                        
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Name="lstSettings">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="&#xE115;" FontFamily="Segoe MDL2 Assets" FontSize="18" Height="28" />
+                        <Label Content="Settings" Background="Transparent" FontWeight="Bold" FontSize="17"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </Grid>
+        <Frame Name="mainFrme" Grid.Column="1" NavigationUIVisibility="Hidden" x:FieldModifier="public"/>
+
+    </Grid>
+</Window>
